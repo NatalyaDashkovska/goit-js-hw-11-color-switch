@@ -24,12 +24,10 @@ const changeColour = {
     this.intervalId = setInterval(() => {
       const bcgColour = colors[randomIntegerFromInterval(0, 5)];
       body.style.backgroundColor = bcgColour;
-      console.log(`change`);
     }, 1000);
   },
   stop() {
     clearInterval(this.intervalId);
-    console.log(`stop`);
     this.intervalId = null;
     this.isActive = false;
   },
