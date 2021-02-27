@@ -24,12 +24,14 @@ const changeColour = {
     this.intervalId = setInterval(() => {
       const bcgColour = colors[randomIntegerFromInterval(0, 5)];
       body.style.backgroundColor = bcgColour;
+      startBtnRef.disabled = true;
     }, 1000);
   },
   stop() {
     clearInterval(this.intervalId);
     this.intervalId = null;
     this.isActive = false;
+    startBtnRef.disabled = false;
   },
 };
 
